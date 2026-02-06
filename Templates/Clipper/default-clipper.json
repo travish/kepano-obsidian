@@ -1,0 +1,76 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Default",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "datetime"
+		},
+		{
+			"name": "modified",
+			"value": "{{date}}",
+			"type": "datetime"
+		},
+		{
+			"name": "date",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "uuid",
+			"value": "{{date|date:\\\"x\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "type",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "subtype",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "cover",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "source_template",
+			"value": "template.web_clipper.default",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "{{noteName|lower}}",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "status/draft",
+			"type": "multitext"
+		},
+		{
+			"name": "source_url",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title | replace:\"/[^a-zA-Z0-9\\s]/g\":\"\" | lower | replace:\"/\\s+/g\":\"_\"}}",
+	"path": "000-099 systems/000 systems-management/01 inbox"
+}
